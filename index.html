@@ -9,41 +9,40 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #0e0e12;
-      color: #e6e6e6;
+      background: #f5f7fa; /* light gray-blue base */
+      color: #1a1a1a;
       line-height: 1.6;
     }
 
-    a { text-decoration: none; color: #ffcc00; }
+    a { text-decoration: none; color: #1a73e8; } /* soft blue links */
 
     /* === Header / Hero === */
     header {
       text-align: center;
       padding: 5rem 2rem;
-      background: linear-gradient(135deg, #0e0e12, #111118);
-      color: #ffcc00;
-      text-shadow: 1px 1px 2px #000;
+      background: #ffffff;
+      color: #1a1a1a;
+      border-bottom: 1px solid #ddd;
     }
 
     header h1 { font-size: 2.8rem; margin-bottom: 0.5rem; }
-    header p { font-size: 1.2rem; margin-bottom: 2rem; color: #f2f2f2; }
+    header p { font-size: 1.2rem; margin-bottom: 2rem; color: #555; }
 
     .btn {
-      background: #ffcc00;
-      color: #0e0e12;
+      background: #1a73e8;
+      color: #ffffff;
       padding: 0.8rem 1.5rem;
-      font-weight: bold;
+      font-weight: 600;
       border-radius: 6px;
       margin: 0.5rem;
       display: inline-block;
-      transition: all 0.3s;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+      transition: all 0.2s;
+      box-shadow: none; /* remove shadow for clean text */
     }
 
     .btn:hover {
-      background: #e6b800;
+      background: #1669c1;
       transform: translateY(-2px);
-      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
     }
 
     /* === Sections === */
@@ -51,26 +50,27 @@
       padding: 4rem 2rem;
       max-width: 900px;
       margin: 2rem auto;
-      background: linear-gradient(135deg, #111118, #0e0e12);
+      background: #ffffff;
       border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     }
 
     section h2 {
       font-size: 2rem;
       margin-bottom: 1rem;
-      border-bottom: 2px solid #333;
+      border-bottom: 2px solid #eee;
       padding-bottom: 0.5rem;
-      color: #ffcc00;
+      color: #1a73e8;
     }
 
     /* === Footer === */
     footer {
       text-align: center;
       padding: 2rem;
-      border-top: 1px solid #333;
+      border-top: 1px solid #ddd;
       font-size: 0.9rem;
-      background: #111118;
+      background: #fafafa;
+      color: #555;
     }
   </style>
 </head>
@@ -123,9 +123,9 @@
     <p>
       Links: 
       <a href="https://dan-ato.github.io">HQ</a> | 
-      <a href="https://www.notion.so/Public-Hub-24ec7f87b062800b81abed1c57a59e1a?source=copy_link">Notion</a> | 
+      <a href="YOUR_NOTION_PUBLIC_PAGE_URL">Notion</a> | 
       <a href="YOUR_DISCORD_INVITE_LINK">Discord</a> | 
-      <a href="non-compliance-co.printify.me">Merch</a>
+      <a href="YOUR_PRINTIFY_SHOP_LINK">Merch</a>
     </p>
   </footer>
 
