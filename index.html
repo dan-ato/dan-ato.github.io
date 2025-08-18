@@ -1,36 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>King Daniel | Portfolio</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #1e1e1e, #2c2c54);
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: rgba(0, 0, 0, 0.3);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #ccc;
+    }
+
+    nav {
+      margin: 1rem 0;
+    }
+
+    nav a {
+      color: #00d4ff;
+      text-decoration: none;
+      margin: 0 1rem;
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: #ff6b6b;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    .card h2 {
+      margin-top: 0;
+      color: #00d4ff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: rgba(0,0,0,0.2);
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+
+    a.download-btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.6rem 1.2rem;
+      background: #00d4ff;
+      color: #111;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a.download-btn:hover {
+      background: #ff6b6b;
+      color: #fff;
+    }
+  </style>
+</head>
 <body>
   <header>
-    <h1>Unlicensed Thinker</h1>
-    <p>Tech | Community | Creation</p>
+    <h1>King Daniel</h1>
+    <p>Electrical Engineering Student | Tech Explorer | Entrepreneur</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <section class="pillar">
-    <h2>📒 Notion</h2>
-    <p>Dive into my open notebook of technical experiments, queries, and thoughts.</p>
-    <a href="YOUR_NOTION_LINK" target="_blank">Visit the Lab</a>
-  </section>
+  <div class="container">
+    <section id="about" class="card">
+      <h2>About Me</h2>
+      <p>
+        I explore the convergence of technology, consciousness, and engineering.
+        I'm working toward mastery in electrical systems, DIY tech builds, and sovereign income streams.
+        This site blends my professional portfolio with a personal edge.
+      </p>
+    </section>
 
-  <section class="pillar">
-    <h2>💻 GitHub</h2>
-    <p>Code, configs, and projects. Explore my GitHub repos.</p>
-    <a href="YOUR_GITHUB_LINK" target="_blank">Explore GitHub</a>
-  </section>
+    <section id="projects" class="card">
+      <h2>Projects</h2>
+      <ul>
+        <li><strong>Mini-PC Home Server:</strong> Documented setup and secure configuration.</li>
+        <li><strong>Printify Merch:</strong> Witty tech/philosophy-driven apparel line.</li>
+        <li><strong>Electrical Engineering Studies:</strong> Focused on signals, control systems, and power grids.</li>
+      </ul>
+    </section>
 
-  <section class="pillar">
-    <h2>🌀 Community & Merch</h2>
-    <div class="split">
-      <div>
-        <p>Join the community on Discord.</p>
-        <a href="YOUR_DISCORD_INVITE" target="_blank">Join Discord</a>
-      </div>
-      <div>
-        <p>Check out my Printify shop.</p>
-        <a href="YOUR_PRINTIFY_LINK" target="_blank">Shop Merch</a>
-      </div>
-    </div>
-  </section>
+    <section class="card">
+      <h2>Resume</h2>
+      <p>Download my resume here:</p>
+      <a href="resume.pdf" class="download-btn" download>📄 Download Resume</a>
+    </section>
+
+    <section id="contact" class="card">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:king@example.com">king@example.com</a></p>
+      <p>GitHub: <a href="https://github.com/YourUsername" target="_blank">github.com/YourUsername</a></p>
+    </section>
+  </div>
 
   <footer>
-    <p>© 2025 Unlicensed Thinker | Half code, half chaos – fully unlicensed.</p>
+    <p>© 2025 King Daniel | Built with raw HTML/CSS ⚡</p>
   </footer>
 </body>
+</html>
