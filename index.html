@@ -88,6 +88,56 @@
       background: #ff6b6b;
       color: #fff;
     }
+
+    /* Experience Section Styling */
+.experience-list {
+  margin-top: 1rem;
+}
+
+.job {
+  margin-bottom: 1rem;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: none;        /* transparent to match your theme */
+  border: none;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  transition: color 0.2s;
+}
+
+.toggle::after {
+  content: "▶";            /* dropdown arrow */
+  font-size: 0.9rem;
+  transition: transform 0.3s ease;
+}
+
+.toggle.active::after {
+  transform: rotate(90deg);  /* arrow rotates when open */
+}
+
+.toggle:hover {
+  color: #00d4ff;          /* match your accent color */
+}
+
+.details {
+  margin: 0.5rem 0 0 1.2rem;
+  padding-left: 1rem;
+  border-left: 2px solid rgba(255, 255, 255, 0.2);
+  list-style: disc;
+  color: #ccc;
+}
+
+.hidden {
+  display: none;
+}
   </style>
 </head>
 <body>
@@ -199,10 +249,10 @@
     btn.addEventListener("click", () => {
       const details = btn.nextElementSibling;
       details.classList.toggle("hidden");
+      btn.classList.toggle("active");
     });
   });
 </script>
-
 
     
     <section id="contact" class="card">
