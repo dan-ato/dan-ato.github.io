@@ -152,6 +152,30 @@
   </div>
 </section>
 
+<style>
+  .toggle {
+    background: #f3f4f6;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 8px;
+    width: 100%;
+    text-align: left;
+    margin-top: 10px;
+  }
+  .details.hidden { display: none; }
+  .details { margin: 10px 20px; }
+</style>
+
+<script>
+  document.querySelectorAll(".toggle").forEach(button => {
+    button.addEventListener("click", () => {
+      const details = button.nextElementSibling;
+      details.classList.toggle("hidden");
+    });
+  });
+</script>
 
     
     <section id="contact" class="card">
