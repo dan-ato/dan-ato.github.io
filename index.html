@@ -6,6 +6,7 @@
   <title>Dan | ATO</title>
   <link rel="icon" type="image/png" href="favicon.png">
   <style>
+    /* ===== Base Styling ===== */
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
@@ -14,57 +15,48 @@
       color: #fff;
       line-height: 1.6;
     }
-
     header {
       text-align: center;
       padding: 2rem 1rem;
-      background: rgba(0, 0, 0, 0.3);
+      background: rgba(0,0,0,0.3);
     }
-
     header h1 {
       margin: 0;
       font-size: 2.5rem;
     }
-
     header p {
       font-size: 1.2rem;
       color: #ccc;
+      margin-top: 0.5rem;
     }
-
     nav {
       margin: 1rem 0;
     }
-
     nav a {
       color: #00d4ff;
       text-decoration: none;
       margin: 0 1rem;
       transition: color 0.2s;
     }
-
     nav a:hover {
       color: #ff6b6b;
     }
-
     .container {
-      max-width: 900px;
+      max-width: 1000px;
       margin: 2rem auto;
       padding: 0 1rem;
     }
-
     .card {
-      background: rgba(255, 255, 255, 0.05);
+      background: rgba(255,255,255,0.05);
       padding: 1.5rem;
       margin-bottom: 2rem;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     }
-
     .card h2 {
       margin-top: 0;
       color: #00d4ff;
     }
-
     footer {
       text-align: center;
       padding: 1rem;
@@ -74,31 +66,55 @@
       color: #aaa;
     }
 
-    a.download-btn {
-      display: inline-block;
+    /* ===== Project Cards ===== */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
       margin-top: 1rem;
-      padding: 0.6rem 1.2rem;
-      background: #00d4ff;
-      color: #111;
-      border-radius: 6px;
+    }
+    .project-card {
+      background: rgba(255,255,255,0.05);
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      transition: transform 0.2s;
+    }
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+    .project-card img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+    }
+    .project-card h3 {
+      margin: 0 0 0.5rem 0;
+      color: #00d4ff;
+    }
+    .project-card p {
+      font-size: 0.95rem;
+      color: #ccc;
+    }
+    .project-card a {
+      display: inline-block;
+      margin-right: 1rem;
+      color: #00d4ff;
       text-decoration: none;
       font-weight: bold;
+      transition: color 0.2s;
+    }
+    .project-card a:hover {
+      color: #ff6b6b;
     }
 
-    a.download-btn:hover {
-      background: #ff6b6b;
-      color: #fff;
-    }
-
-    /* ---- Experience section styling ---- */
+    /* ===== Experience toggles ===== */
     .experience-list {
       margin-top: 1rem;
     }
-
     .job {
       margin-bottom: 1rem;
     }
-
     .toggle {
       display: flex;
       align-items: center;
@@ -113,29 +129,24 @@
       padding: 0.5rem 0;
       transition: color 0.2s;
     }
-
     .toggle::after {
       content: "▶";
       font-size: 0.9rem;
       transition: transform 0.3s ease;
     }
-
     .toggle.active::after {
       transform: rotate(90deg);
     }
-
     .toggle:hover {
       color: #00d4ff;
     }
-
     .details {
       margin: 0.5rem 0 0 1.2rem;
       padding-left: 1rem;
-      border-left: 2px solid rgba(255, 255, 255, 0.2);
+      border-left: 2px solid rgba(255,255,255,0.2);
       list-style: disc;
       color: #ccc;
     }
-
     .hidden {
       display: none;
     }
@@ -144,90 +155,102 @@
 <body>
   <header>
     <h1>Dan | ATO</h1>
-    <p> Engineering Student | Tech Explorer | Entrepreneur</p>
+    <p>Engineering Student | Tech Explorer | Entrepreneur</p>
     <nav>
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <div class="container">
+
+    <!-- About Section -->
     <section id="about" class="card">
       <h2>Identity & Trajectory</h2>
       <p>
         Electrical Engineering student, IT professional, veteran, and technology enthusiast. I explore the convergence of technology, philosophy, and engineering.
-        I'm working toward mastery in electrical systems, DIY tech builds, and technological independence (among other forms of independence).  
-        This site functions as both my professional portfolio, as well as a platform for sharing my projects and interests.
+        I'm working toward mastery in electrical systems, DIY tech builds, and technological independence.  
+        This site functions as both my professional portfolio and a platform for sharing projects and applied work.
       </p>
     </section>
 
+    <!-- Projects Section -->
     <section id="projects" class="card">
       <h2>Projects & Applied Work</h2>
-      <ul>
-        <li><strong>Mini-PC Home Server:</strong> Documented setup and secure configuration.</li>
-        <li><strong>Printify Merch:</strong> Witty tech/philosophy-driven apparel line.</li>
-        <li><strong>Electrical Engineering Studies:</strong> Focused on signals, control systems, and power grids.</li>
-      </ul>
+      <div class="projects">
+
+        <!-- Broke-O-Meter -->
+        <div class="project-card">
+          <img src="images/broke-o-meter.gif" alt="Broke-O-Meter Screenshot">
+          <h3>Broke-O-Meter</h3>
+          <p>Interactive finance app that calculates your Broke Score based on income and expenses, tracking persistent data over time using Streamlit Cloud.</p>
+          <a href="https://github.com/<yourusername>/broke-o-meter" target="_blank">GitHub</a>
+          <a href="https://share.streamlit.io/<yourusername>/broke-o-meter/main/app.py" target="_blank">Live Demo</a>
+        </div>
+
+        <!-- Advanced Paycheck Estimator -->
+        <div class="project-card">
+          <img src="images/adv-paycheck.gif" alt="Advanced Paycheck Estimator Screenshot">
+          <h3>Advanced Paycheck Estimator</h3>
+          <p>Precision paycheck estimator with rolling deductions. CLI ready and Streamlit-compatible for anytime access.</p>
+          <a href="https://github.com/<yourusername>/advanced-paycheck-calculator" target="_blank">GitHub</a>
+        </div>
+
+        <!-- Future Projects -->
+        <div class="project-card">
+          <img src="images/placeholder.png" alt="Future Project Placeholder">
+          <h3>Future Projects</h3>
+          <p>Space reserved for upcoming electrical engineering, IoT, or Python projects. Live demos and GitHub links will appear as they’re completed.</p>
+        </div>
+
+      </div>
     </section>
 
-    <section class="card">
-      <h2>Resume & Docs</h2>
-      <p>Download my resume here:</p>
-      <a href="resume.pdf" class="download-btn" download>📄 Download Resume</a>
+    <!-- Experience Section -->
+    <section id="experience" class="card">
+      <h2>Experience & Roles</h2>
+      <div class="experience-list">
+
+        <div class="job">
+          <button class="toggle">United States Air Force — Enlisted Specialist</button>
+          <ul class="details hidden">
+            <li>Developed professional foundation through structured military service, balancing rank responsibilities with occupational duties.</li>
+            <li>Executed mission-critical tasks requiring precision, accountability, and technical adaptability.</li>
+            <li>Strengthened leadership, discipline, and operational reliability within a hierarchical chain of command.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <button class="toggle">Defense IT Support — Networks, Infrastructure & Software</button>
+          <ul class="details hidden">
+            <li>Provided IT support for critical military installations, ensuring continuity of operations.</li>
+            <li>Integrated, maintained, and secured network infrastructure and multi-domain systems.</li>
+            <li>Adapted to diverse technical environments, reinforcing cybersecurity and reliability.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <button class="toggle">Commercial IT — Strategic Support to IT Director</button>
+          <ul class="details hidden">
+            <li>Served as right-hand to the IT Director, bridging executive strategy and technical execution.</li>
+            <li>Coordinated resources and projects across departments to maintain operational continuity.</li>
+            <li>Expanded role from technical support into organizational strategy and systems planning.</li>
+          </ul>
+        </div>
+
+      </div>
     </section>
 
-    <!-- New Experience Section -->
-<section class="card">
-  <h2>Positional Experience</h2>
-  <p>Download my full resume: 
-    <a href="resume.pdf" target="_blank">Resume PDF</a>
-  </p>
-
-  <div class="experience-list">
-
-    <div class="job">
-      <button class="toggle">United States Air Force — Enlisted Specialist</button>
-      <ul class="details hidden">
-        <li>Developed professional foundation through structured military service, balancing rank responsibilities with occupational duties.</li>
-        <li>Executed mission-critical tasks requiring precision, accountability, and technical adaptability.</li>
-        <li>Strengthened leadership, discipline, and operational reliability within a hierarchical chain of command.</li>
-      </ul>
-    </div>
-
-    <div class="job">
-      <button class="toggle">Defense IT Support — Networks, Infrastructure & Software</button>
-      <ul class="details hidden">
-        <li>Provided IT support for critical military installations, ensuring continuity of operations.</li>
-        <li>Integrated, maintained, and secured network infrastructure and multi-domain systems.</li>
-        <li>Adapted to diverse technical environments, reinforcing cybersecurity and reliability.</li>
-      </ul>
-    </div>
-
-    <div class="job">
-      <button class="toggle">Commercial IT — Strategic Support to IT Director</button>
-      <ul class="details hidden">
-        <li>Served as right-hand to the IT Director, bridging executive strategy and technical execution.</li>
-        <li>Coordinated resources and projects across departments to maintain operational continuity.</li>
-        <li>Expanded role from technical support into organizational strategy and systems planning.</li>
-      </ul>
-    </div>
-
-  </div>
-</section>
-
+    <!-- Contact Section -->
     <section id="contact" class="card">
       <h2>Contact</h2>
       <p>Email: <a href="mailto:king@example.com">king@example.com</a></p>
       <p>GitHub: <a href="https://github.com/dan-ato" target="_blank">https://github.com/dan-ato</a></p>
+      <p>Discord: <a href="#" target="_blank">Community Space</a></p>
     </section>
 
-    <section id="content" class="card">
-      <h2>Explore Content</h2>
-      <p>Notion: <a href="https://www.notion.so/Public-Hub-for-Sovereignty-Building-24ec7f87b062800b81abed1c57a59e1a?source=copy_link">Notion Link</a></p>
-      <p>Discord: <a href="https://github.com/dan-ato" target="_blank">Community Space</a></p>
-      <p>Merch: <a href="https://github.com/dan-ato" target="_blank">Site Page</a></p>
-    </section>
   </div>
 
   <footer>
@@ -235,6 +258,7 @@
   </footer>
 
   <script>
+    // Experience toggle logic
     document.querySelectorAll(".toggle").forEach(btn => {
       btn.addEventListener("click", () => {
         const details = btn.nextElementSibling;
